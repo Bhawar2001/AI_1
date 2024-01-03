@@ -1,0 +1,61 @@
+Element name,Description,Data type,Character length,Acceptable Values,Required,Accepts null
+HS_data,GeoScout Holland Scientific data logger recording CropCircle sensor outputs,serial,N/A,N/A,N/A,N/A
+LONGITUDE,GPS global meridian coordinate in decimal degrees,float,13, -ddd.mmmmmm,y,y
+LATITUDE,GPS global parallel coordinate in decimal degrees,float,10,dd.mmmmmmm,y,y
+ELEVATION,GPS meters above sea-level geoid,float,5,x.x,y,y
+FIX_TYPE,GPS signal indication 2=WASS DGPS for better accuracy,integer,1,1 to 2,n,y
+UTC_TIME,GPS universal time coordinate key value,float,8,hhmmss.0,y,y
+SPEED,GPS rig speed in meters per second,float,4,x.xx,n,y
+COURSE,GPS rig point to point calculated heading in degrees,float,5,xxx.x,n,y
+SENSOR,CropCircle ACS-470 sensor number or name,integer,1,2 or 3,y,y
+VI1,Onboard VI calculation not used - commercial output,float,6,0 - 1,n,y
+VI2,Onboard VI calculation not used - commercial output,float,6,0 - 1,n,y
+R1,Raw optical detector channel - 800 and 800 nm - primary data,float,6,0 - 10,y,y
+R2,Raw optical detector channel - 730 or 780 nm - primary data,float,6,0 - 10,y,y
+R3,Raw optical detector channel - 670 or 590 nm - primary data,float,6,0 - 10,y,y
+APP_RATE,Not used - precision N application rates for commercial production,N/A,N/A,N/A,N/A,N/A
+CS_data,Campbell Scientific data logger collecting additional metrics,analog,N/A,N/A,N/A,N/A
+TIMESTAMP,"CS Logger generated time string, most precise clock at runtime",string,255,mm/dd/yyyy hh:mm:ss.0,y,y
+RECORD,CS Logger generated incrementing data line output count,integer,255,x,y,y
+counter,Program execution measurement loop count,integer,255,x,n,y
+GPSyear,Current year parsed from GPS string,integer,4,x,n,y
+GPSmonth,Current month parsed from GPS string,integer,2,x,n,y
+GPSday,Current day of the month parsed from GPS string,integer,2,x,n,y
+GPShour,Current hour parsed from GPS UTC,integer,2,x,n,y
+GPSminute,Current minute parsed from GPS UTC,integer,2,x,n,y
+GPSsecond,Current second parsed from GPS UTC,integer,2,x,n,y
+batt_volt_Min,CS Logger supply voltage (12v),float,5,10 to 14.5,n,y
+RMC_Lat,GPS NEMA RMC string latitude in decimal degrees,float,11,xxxx.xxxxxx,n,y
+RMC_Long,GPS NEMA RMC string longitude in decimal degrees,float,11,xxxxx.xxxxx,n,y
+RMC_Date,GPS NEMA RMC string current date,integer,6,xxxxxx,n,y
+RMC_UTC,GPS NEMA RMC string UTC key time value (true universal time),float,8,xxxxxx.x,y,y
+RMC_Knots,GPS NEMA RMC string point to point calculated rig speed in knots,float,4,x.xx,n,y
+GGA_Quality,"GPS NEMA GGA string signal quality, 2=WASS",integer,1,1 or 2,n,y
+GGA_Sat,GPS NEMA GGA string number of satellites in view,integer,2,1 to 12,n,y
+PTemp,CS Logger electronic panel temperature in Celsius,float,5, -10 to 75,n,y
+AirTemp,Ambient TC test setup for air temperature in Celsius,float,5,xx.xx,y,y
+TargTemp_1022,Backward view IRT target temperature in Celsius,float,5,xx.xx,y,y
+TargTemp_1023,Nadir view IRT target temperature in Celsius,float,5,xx.xx,y,y
+TargTemp_1052,Forward view IRT target temperature in Celsius,float,5,xx.xx,y,y
+SBTemp_1022,Backward view IRT sensor body temperature in Celsius,float,5,xx.xx,n,y
+SBTemp_1023,Nadir view IRT sensor body temperature in Celsius,float,5,xx.xx,n,y
+SBTemp_1052,Forward view IRT sensor body temperature in Celsius,float,5,xx.xx,n,y
+TmV_1022_Avg,Backward view IRT raw microvolt signal,float,8,x.xxxxxx,n,y
+TmV_1023_Avg,Nadir view IRT raw microvolt signal,float,8,x.xxxxxx,n,y
+TmV_1052_Avg,Forward view IRT raw microvolt signal,float,8,x.xxxxxx,n,y
+HoneyVolts,Honeywell ultrasonic displacement sensor raw voltage signal,float,8,1000 to 4900,n,y
+HoneyInches,Honeywell ultrasonic distance from sensor to target in inches,float,5,xx.xx,n,y
+Honey_cm,Honeywell ultrasonic distance from sensor to target in cm,float,5,xx.xx,y,y
+cYear,CS Logger derived Year of record,integer,4,xxxx,n,y
+cMonth,CS Logger derived Month of record,integer,2,xx,n,y
+cDay,CS Logger derived Calendar Day of record,integer,2,xx,n,y
+cHours,CS Logger derived Hour of Day of record,integer,2,xx,n,y
+cMinutes,CS Logger derived Minute of Hour of record,integer,2,xx,n,y
+cSeconds,CS Logger derived Second of Minute of record,integer,2,xx,n,y
+cMicroseconds,CS Logger derived Microsecond of Second of record,integer,6,xxxxxx,n,y
+WeekDay,CS Logger derived Day of Week of record,integer,1,x,n,y
+Day_of_Year,CS Logger derived Julian Day of Year of record,integer,3,xxx,n,y
+SonicV,Madison ultrasonic test sensor raw signal voltage potiential,float,8,x.xxxxxx,n,y
+Mad_Inches,Madison ultrasonic test sensor calculated distance in inches from sensor to target,integer,2,xx,n,y
+ParallaxTime,Parallax ultrasonic test sensor raw Pulse Width Modulated signal,float,8,xxxx.xxx,n,y
+Parallax_Inches,Parallax ultrasonic test sensor calculated distance from sensor to target in inches,float,5,xx.xx,n,y
